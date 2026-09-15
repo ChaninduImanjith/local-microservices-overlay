@@ -35,6 +35,7 @@
     "Visualization"
   ],
   "activationEvents": [
+    "onStartupFinished",
     "onView:microservicesView"
   ],
   "main": "./dist/extension.js",
