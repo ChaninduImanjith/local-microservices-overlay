@@ -4,6 +4,7 @@
   "description": "Real-time monitoring, health checks, live log streaming, and container lifecycle management for local Docker Compose microservices — directly within VS Code.",
   "version": "1.0.0",
   "publisher": "ChaninduImanjith",
+  "icon": "media/icon.png",
   "author": {
     "name": "Chanindu Imanjith",
     "email": "chanindu.imanjith@gmail.com"

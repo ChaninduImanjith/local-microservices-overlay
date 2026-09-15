@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#4ade80"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="256" height="256" rx="56" fill="url(#bgGrad)"/>
+  <rect x="2" y="2" width="252" height="252" rx="54" fill="none" stroke="#334155" stroke-width="3"/>
+
+  <!-- Docker-style container boxes -->
+  <g transform="translate(48, 54)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="46" height="36" rx="8" fill="url(#boxGrad1)"/>
+    <rect x="56" y="0" width="46" height="36" rx="8" fill="url(#boxGrad1)"/>
+    <rect x="112" y="0" width="46" height="36" rx="8" fill="url(#boxGrad2)"/>
+
+    <!-- Row 2 -->
+    <rect x="0" y="46" width="46" height="36" rx="8" fill="url(#boxGrad2)"/>
+    <rect x="56" y="46" width="46" height="36" rx="8" fill="url(#boxGrad1)"/>
+    <rect x="112" y="46" width="46" height="36" rx="8" fill="url(#boxGrad1)"/>
+
+    <!-- Row 3 -->
+    <rect x="0" y="92" width="46" height="36" rx="8" fill="url(#boxGrad1)"/>
+    <rect x="56" y="92" width="46" height="36" rx="8" fill="url(#boxGrad2)"/>
+    <rect x="112" y="92" width="46" height="36" rx="8" fill="url(#boxGrad1)"/>
+  </g>
+
+  <!-- Live overlay health line across bottom -->
+  <path d="M 32 196 L 70 196 L 85 170 L 105 220 L 125 180 L 140 205 L 155 196 L 224 196" 
+        fill="none" 
+        stroke="url(#pulseGrad)" 
+        stroke-width="7" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+
+  <!-- Pulse dots -->
+  <circle cx="105" cy="220" r="5" fill="#4ade80" filter="url(#glow)"/>
+  <circle cx="85" cy="170" r="4" fill="#38bdf8"/>
+</svg>
